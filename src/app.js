@@ -29,7 +29,7 @@ const universityRoutes = require('./routes/universityRoutes');
 const coordinatorRoutes = require('./routes/coordinatorRoutes');
 
 const app = express();
-
+app.set('trust proxy', 1);
 // --- Security & core middleware ---
 app.use(helmet());
 app.use(
