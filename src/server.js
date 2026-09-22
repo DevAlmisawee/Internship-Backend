@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   await connectDB();
 
-  const server = app.listen(PORT, () => {
+  const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`InternIQ backend running on port ${PORT} [${process.env.NODE_ENV || 'development'}]`);
     console.log(`API docs available at http://localhost:${PORT}/api-docs`);
   });
